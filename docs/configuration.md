@@ -103,8 +103,7 @@ heading_anchors: true
 ```yaml
 # Footer content
 # appears at the bottom of every page's main content
-# Note: The footer_content option is deprecated and will be removed in a future major release. Please use `_includes/footer_custom.html` for more robust
-markup / liquid-based content.
+# Note: The footer_content option is deprecated and will be removed in a future major release. Please use `_includes/footer_custom.html` for more robust markup / liquid-based content.
 footer_content: "Copyright &copy; 2017-2020 Patrick Marsceill. Distributed by an <a href=\"https://github.com/just-the-docs/just-the-docs/tree/main/LICENSE.txt\">MIT license.</a>"
 
 # Footer last edited timestamp
@@ -120,14 +119,14 @@ gh_edit_branch: "main" # the branch that your docs is served from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
 ```
 
-_note: `footer_content` is deprecated, but still supported. For a better experience we have moved this into an include called `_includes/footer_custom.html` which will allow for robust markup / liquid-based content._
+_注记：`footer_content` 已经被声明弃用，但是现在还支持。更好的体验我们已经将其移入一个叫做 `_includes/footer_custom.html` 的文件（该文件允许更强标记系统——基于 Liquid 的内容）。_
 
-- the "page last modified" data will only display if a page has a key called `last_modified_date`, formatted in some readable date format
-- `last_edit_time_format` uses Ruby's DateTime formatter; see examples and more information [at this link.](https://apidock.com/ruby/DateTime/strftime)
-- `gh_edit_repository` is the URL of the project's GitHub repository
-- `gh_edit_branch` is the branch that the docs site is served from; defaults to `main`
-- `gh_edit_source` is the source directory that your project files are stored in (should be the same as [site.source](https://jekyllrb.com/docs/configuration/options/))
-- `gh_edit_view_mode` is `"tree"` by default, which brings the user to the github page; switch to `"edit"` to bring the user directly into editing mode
+- “页面最后修改”数据只有当页面有叫做 `last_modified_date` 的值时才显示，数据格式使用可读日期格式
+- `last_edit_time_format` 使用 Ruby 的 DateTime 格式；查阅示例和更多信息[在此链接](https://apidock.com/ruby/DateTime/strftime)。
+- `gh_edit_repository` 是项目 GitHub 源码库的 URL
+- `gh_edit_branch` 是文档站点服务来自哪个分支；默认是 `main`
+- `gh_edit_source` 是您的项目文件存储(应该类似于 [site.source](https://jekyllrb.com/docs/configuration/options/))的源文件目录
+- `gh_edit_view_mode` 默认是 `"tree"`，会带用户到 GitHub 页面；启用 `"编辑"` 会带用户进入编辑模式
 
 ## 色系
 
