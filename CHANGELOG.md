@@ -1,5 +1,5 @@
 ---
-title: CHANGELOG
+title: 版本备注
 layout: default
 ---
 

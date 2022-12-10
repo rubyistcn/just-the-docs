@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Responsive Modifiers
-parent: Utilities
+title: 自适应修饰符
+parent: 工具
 ---
 
 # Responsive modifiers

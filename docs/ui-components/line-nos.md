@@ -1,8 +1,8 @@
 ---
 layout: default
-title: Code with line numbers
-parent: Code
-grand_parent: UI Components
+title: 带行标的代码
+parent: 代码
+grand_parent: UI 组件
 permalink: /docs/ui-components/code/line-numbers/
 ---
 

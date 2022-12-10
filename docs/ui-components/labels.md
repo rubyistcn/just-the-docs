@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Labels
-parent: UI Components
+title: 标签
+parent: UI 组件
 nav_order: 3
 ---
 

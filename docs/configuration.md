@@ -1,16 +1,16 @@
 ---
 layout: default
-title: Configuration
+title: 配置
 nav_order: 2
 ---
 
-# Configuration
+# 配置
 {: .no_toc }
 
-Just the Docs has some specific configuration parameters that can be defined in your Jekyll site's \_config.yml file.
+Just the Docs 有些特定配置参数可在您的 Jekyll 站点的 \_config.yml 文件中配置。
 {: .fs-6 .fw-300 }
 
-## Table of contents
+## 目录
 {: .no_toc .text-delta }
 
 1. TOC
@@ -18,16 +18,16 @@ Just the Docs has some specific configuration parameters that can be defined in 
 
 ---
 
-View this site's [\_config.yml](https://github.com/just-the-docs/just-the-docs/tree/main/_config.yml) file as an example.
+查看本站 [\_config.yml](https://github.com/just-the-docs/just-the-docs/tree/main/_config.yml) 文件可做为一个示范。
 
-## Site logo
+## 站点 Logo
 
 ```yaml
 # Set a path/url to a logo that will be displayed instead of the title
 logo: "/assets/images/just-the-docs.png"
 ```
 
-## Search
+## 搜索
 
 ```yaml
 # Enable or disable the site search
@@ -59,9 +59,9 @@ search:
   button: false
 ```
 
-## Mermaid Diagrams
+## Mermaid 图表
 
-The minimum configuration requires the key for `version` ([from jsDelivr](https://cdn.jsdelivr.net/npm/mermaid/)) in `_config.yml`:
+最低配置也需要在 `_config.yml` 中设定 `version` ([from jsDelivr](https://cdn.jsdelivr.net/npm/mermaid/)) 的值:
 
 ```yaml
 mermaid:
@@ -70,9 +70,9 @@ mermaid:
   version: "9.1.3"
 ```
 
-See [the Code documentation]({{ site.baseurl }}{% link docs/ui-components/code.md %}#mermaid-diagram-code-blocks) for more configuration options and information.
+查阅[代码相关文档]({{ site.baseurl }}{% link docs/ui-components/code.md %}#mermaid-diagram-code-blocks)获取更多配置选项和信息。
 
-## Aux links
+## Aux 链接
 
 ```yaml
 # Aux links for the upper right navigation
@@ -84,7 +84,7 @@ aux_links:
 aux_links_new_tab: false
 ```
 
-## Heading anchor links
+## 标题锚点链接
 
 ```yaml
 # Heading anchor links appear on hover over h1-h6 tags in page content
@@ -94,12 +94,11 @@ aux_links_new_tab: false
 heading_anchors: true
 ```
 
-## External navigation links
+## 外部导航类链接
 
-External links can be added to the navigation through the `nav_external_links` option.
-See [Navigation Structure]({{ site.baseurl }}{% link docs/navigation-structure.md %}#external-navigation-links) for more details.
+外部链接可以通过 `nav_external_links` 选项添加到导航。查阅[导航结构]({{ site.baseurl }}{% link docs/navigation-structure.md %}#external-navigation-links)获取更多信息。
 
-## Footer content
+## Footer 内容
 
 ```yaml
 # Footer content
@@ -130,14 +129,14 @@ _note: `footer_content` is deprecated, but still supported. For a better experie
 - `gh_edit_source` is the source directory that your project files are stored in (should be the same as [site.source](https://jekyllrb.com/docs/configuration/options/))
 - `gh_edit_view_mode` is `"tree"` by default, which brings the user to the github page; switch to `"edit"` to bring the user directly into editing mode
 
-## Color scheme
+## 色系
 
 ```yaml
 # Color scheme supports "light" (default) and "dark"
 color_scheme: dark
 ```
 
-<button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
+<button class="btn js-toggle-dark-mode">预览暗色系方案</button>
 
 <script>
 const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
@@ -145,19 +144,19 @@ const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
 jtd.addEvent(toggleDarkMode, 'click', function(){
   if (jtd.getTheme() === 'dark') {
     jtd.setTheme('light');
-    toggleDarkMode.textContent = 'Preview dark color scheme';
+    toggleDarkMode.textContent = '预览暗色系方案';
   } else {
     jtd.setTheme('dark');
-    toggleDarkMode.textContent = 'Return to the light side';
+    toggleDarkMode.textContent = '返回亮色系';
   }
 });
 </script>
 
-See [Customization]({{ site.baseurl }}{% link docs/customization.md %}) for more information.
+查阅[定制]({{ site.baseurl }}{% link docs/customization.md %})获取更多信息。
 
-## Callouts
+## 标注
 
-To use this feature, you need to configure a `color` and (optionally) `title` for each kind of callout you want to use, e.g.:
+使用此功能，您需要为每一种您想使用的标注配置一个 `color` 和 `title`（可选），例如：
 
 ```yaml
 callouts:
@@ -217,12 +216,11 @@ ga_tracking: UA-5555555-55
 ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true by default)
 ```
 
-## Document collections
+## 文档专题
 
-By default, the navigation and search include normal [pages](https://jekyllrb.com/docs/pages/).
-You can also use [Jekyll collections](https://jekyllrb.com/docs/collections/) which group documents semantically together.
+默认情况下，导航和搜索囊括普通[页面](https://jekyllrb.com/docs/pages/)。您可以使用 [Jekyll 专题](https://jekyllrb.com/docs/collections/)聚合语义相关文档。
 
-For example, put all your test files in the `_tests` folder and create the `tests` collection:
+例如，将所有测试文件放入 `_tests` 文件夹，创建 `tests` 专题：
 
 ```yaml
 # Define Jekyll collections

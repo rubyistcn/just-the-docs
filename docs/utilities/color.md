@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Color
-parent: Utilities
+title: 颜色
+parent: 工具
 ---
 
 # Color Utilities

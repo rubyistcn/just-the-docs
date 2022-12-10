@@ -1,66 +1,65 @@
 ---
 layout: default
-title: Home
+title: 首页
 nav_order: 1
-description: "Just the Docs is a responsive Jekyll theme with built-in search that is easily customizable and hosted on GitHub Pages."
+description: "Just the Docs 是一款自适应 Jekyll 主题（内建容易定制的搜索，可以托管于 GitHub Pages）。"
 permalink: /
 ---
 
-# Focus on writing good documentation
+# 聚焦编写漂亮文档
 {: .fs-9 }
 
-Just the Docs gives your documentation a jumpstart with a responsive Jekyll theme that is easily customizable and hosted on GitHub Pages.
+Just the Docs 用一款易定制、可在 GitHub Pages 托管的自适应 Jekyll 主题助力您的文档编写。
 {: .fs-6 .fw-300 }
 
-[Get started now](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
-[View it on GitHub][Just the Docs repo]{: .btn .fs-5 .mb-4 .mb-md-0 }
+[即刻上手](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[在 GitHub 查看源码][Just the Docs 源码库]{: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---
 
 {: .warning }
-> This website documents the features of the current `main` branch of the Just the Docs theme. See [the CHANGELOG]({{ site.baseurl }}{% link CHANGELOG.md %}) for a list of releases, new features, and bug fixes. 
+> 本文档所述功能基于 Just the Docs 主题的当前 `main` 分支。查看[版本备注]({{ site.baseurl }}{% link CHANGELOG.md %})可知更详细的版本、新功能和问题修复等。
 
-Just the Docs is a theme for generating static websites with [Jekyll]. You can write source files for your web pages using [Markdown], the [Liquid] templating language, and HTML.[^1] Jekyll builds your site by converting all files that have [front matter] to HTML. Your [Jekyll configuration] file determines which theme to use, and sets general parameters for your site, such as the URL of its home page.
+Just the Docs 是一款可生成静态站点的 [Jekyll] 主题。您可以使用 [Markdown]、[Liquid] 模板语言和 HTML 来编写网页的源文件。[^1] Jekyll 通过转换所有带有 [front matter] 的文件为 HTML 从而构建站点。您的 [Jekyll 配置]文件决定了用哪个主题以及站点设置常用参数（例如主页的 URL 等）。
 
-Jekyll builds this Just the Docs theme docs website using the theme itself. These web pages show how your web pages will look *by default* when you use this theme. But you can easily *[customize]* the theme to make them look completely different!
+Jekyll 就是使用了本主题构建的 Just the Docs 主题文档。这些网页展示了当您使用此主题时网页的*默认*样子。但是您可以很容易*[定制]*主题，使其看起来完全不同！
 
-Browse the docs to learn more about how to use this theme.
+浏览文档学习如何使用本主题。
 
-## Getting started
+## 起步
 
-The [Just the Docs Template] provides the simplest, quickest, and easiest way to create a new website that uses the Just the Docs theme. To get started with creating a site, just click "[use the template]"!
-
-{: .note }
-To use the theme, you do ***not*** need to clone or fork the [Just the Docs repo]! You should do that only if you intend to browse the theme docs locally, contribute to the development of the theme, or develop a new theme based on Just the Docs.
-
-You can easily set the site created by the template to be published on [GitHub Pages] – the [template README] file explains how to do that, along with other details.
-
-If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^2] And you will be able to deploy your local build to a different platform than GitHub Pages.
-
-More specifically, the created site:
-
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
-
-Other than that, you're free to customize sites that you create with the template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
+[Just the Docs 模板]提供了最简洁、快速、容易的方式创建启用 Just the Docs 主题的新站点。要通过创建一个新站点起步，就点击“[使用模板]”！
 
 {: .note }
-See the theme [README][Just the Docs README] for how to use the theme as a gem without creating a new site.
+使用主题您***不***需要复制 [Just the Docs 源码库]！只有您想要在本地浏览主题文档、辅助开发主题或者基于 Just the Docs 开发新主题时才需要复制源码库。
 
-## About the project
+您能很容易地通过模板创建站点然后发布到 [GitHub Pages] —— [模板 README] 文件说明了如何运行等相关细节。
 
-Just the Docs is &copy; 2017-{{ "now" | date: "%Y" }} by [Patrick Marsceill](http://patrickmarsceill.com).
+如果您的计算机安装了 [Jekyll]，您可以在*本地*构建和预览创建的站点。这可以让您在提交到代码库前就可以测试修改，以免提交到 GitHub Pages 后才能看到结果。[^2]这样您也可以将您的站点部署到不止 GitHub Pages 平台。
 
-### License
+更具体点儿，创建站点：
 
-Just the Docs is distributed by an [MIT license](https://github.com/just-the-docs/just-the-docs/tree/main/LICENSE.txt).
+- 用 gem 方法，例如，用 `Gemfile` 加载 `just-the-docs` gem
+- 用 [GitHub Pages / Actions workflow] 构建和发布站点到 GitHub Pages
 
-### Contributing
+除此之外，您还可以随意定制您用模板创建的站点。您可以轻松的修改 `just-the-docs` 和 Jekyll 的版本，添加更多的插件。
 
-When contributing to this repository, please first discuss the change you wish to make via issue,
-email, or any other method with the owners of this repository before making a change. Read more about becoming a contributor in [our GitHub repo](https://github.com/just-the-docs/just-the-docs#contributing).
+{: .note }
+查看主题 [README][Just the Docs README] 获取更多不必创建新站点而以 Gem 方式使用主题的信息。
 
-#### Thank you to the contributors of Just the Docs!
+## 关于项目
+
+Just the Docs &copy; 2017-{{ "now" | date: "%Y" }} 由 [Patrick Marsceill](http://patrickmarsceill.com) 编写。
+
+### 许可
+
+Just the Docs 基于 [MIT 许可](https://github.com/just-the-docs/just-the-docs/tree/main/LICENSE.txt)分发。
+
+### 贡献
+
+当您想要为这个代码库做贡献的时候，请先通过 Issue、电子邮件或其他方式同代码库的所有者讨论您想要做的修改。阅读更多关于成为[我们的 GitHub 代码库](https://github.com/just-the-docs/just-the-docs#contributing)的贡献者相关细节。
+
+#### 感谢 Just the Docs 的贡献者！
 
 <ul class="list-style-none">
 {% for contributor in site.github.contributors %}
@@ -70,30 +69,30 @@ email, or any other method with the owners of this repository before making a ch
 {% endfor %}
 </ul>
 
-### Code of Conduct
+### 代码规范
 
-Just the Docs is committed to fostering a welcoming community.
+Just the Docs 承诺培养一个友善的社区。
 
-[View our Code of Conduct](https://github.com/just-the-docs/just-the-docs/tree/main/CODE_OF_CONDUCT.md) on our GitHub repository.
+在我们的 GitHub 代码库[查看我们的代码规范](https://github.com/just-the-docs/just-the-docs/tree/main/CODE_OF_CONDUCT.md)。
 
 ----
 
-[^1]: The [source file for this page] uses all three markup languages.
+[^1]: [本页源文件]使用了全部三种标记语言。
 
-[^2]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
+[^2]: [在 GitHub 只需十分钟就可以修改您的站点并发布](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
 
 [Jekyll]: https://jekyllrb.com
 [Markdown]: https://daringfireball.net/projects/markdown/
 [Liquid]: https://github.com/Shopify/liquid/wiki
 [Front matter]: https://jekyllrb.com/docs/front-matter/
-[Jekyll configuration]: https://jekyllrb.com/docs/configuration/
-[source file for this page]: https://github.com/just-the-docs/just-the-docs/blob/main/index.md
-[Just the Docs Template]: https://just-the-docs.github.io/just-the-docs-template/
+[Jekyll 配置]: https://jekyllrb.com/docs/configuration/
+[本页源文件]: https://github.com/just-the-docs/just-the-docs/blob/main/index.md
+[Just the Docs 模板]: https://just-the-docs.github.io/just-the-docs-template/
 [Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[Just the Docs repo]: https://github.com/just-the-docs/just-the-docs
+[Just the Docs 源码库]: https://github.com/just-the-docs/just-the-docs
 [Just the Docs README]: https://github.com/just-the-docs/just-the-docs/blob/main/README.md
 [GitHub Pages]: https://pages.github.com/
-[Template README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
+[模板 README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
 [GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[customize]: {{ site.baseurl }}{% link docs/customization.md %}
-[use the template]: https://github.com/just-the-docs/just-the-docs-template/generate
+[定制]: {{ site.baseurl }}{% link docs/customization.md %}
+[使用模板]: https://github.com/just-the-docs/just-the-docs-template/generate

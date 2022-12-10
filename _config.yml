@@ -14,9 +14,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Just the Docs
-description: A Jekyll theme for documentation
+description: 一款面向文档写作的 Jekyll 主题
 baseurl: "/just-the-docs" # the subpath of your site, e.g. /blog
-url: "https://just-the-docs.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://docs.rubyist.cn" # the base hostname & protocol for your site, e.g. http://example.com
 
 permalink: pretty
 
@@ -88,7 +88,7 @@ heading_anchors: true
 
 # Aux links for the upper right navigation
 aux_links:
-  "Just the Docs on GitHub":
+  "Just the Docs 在 GitHub":
     - "//github.com/just-the-docs/just-the-docs"
 
 # Makes Aux links open in a new tab. Default is false
@@ -100,7 +100,7 @@ nav_sort: case_sensitive # Capital letters sorted before lowercase
 
 # External navigation links
 nav_external_links:
-  - title: Just the Docs on GitHub
+  - title: Just the Docs 在 GitHub
     url: https://github.com/just-the-docs/just-the-docs
 
 # Footer content
@@ -108,9 +108,9 @@ nav_external_links:
 
 # Back to top link
 back_to_top: true
-back_to_top_text: "Back to top"
+back_to_top_text: "返回顶部"
 
-footer_content: "Copyright &copy; 2017-2020 Patrick Marsceill. Distributed by an <a href=\"https://github.com/just-the-docs/just-the-docs/tree/main/LICENSE.txt\">MIT license.</a> <a href=\"https://www.netlify.com/\">This site is powered by Netlify.</a>"
+footer_content: "Copyright &copy; 2017-2020 Patrick Marsceill。软件基于 <a href=\"https://github.com/just-the-docs/just-the-docs/tree/main/LICENSE.txt\">MIT 许可</a>分发。<a href=\"https://www.netlify.com/\">此站点由 Netlify 构建。</a>"
 
 # Footer last edited timestamp
 last_edit_timestamp: true # show or hide edit time - page must have `last_modified_date` defined in the frontmatter
@@ -120,7 +120,7 @@ last_edit_time_format: "%b %e %Y at %I:%M %p" # uses ruby's time format: https:/
 
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
-gh_edit_link_text: "Edit this page on GitHub"
+gh_edit_link_text: "在 GitHub 编辑此页"
 gh_edit_repository: "https://github.com/just-the-docs/just-the-docs" # the github URL for your repo
 gh_edit_branch: "main" # the branch that your docs is served from
 # gh_edit_source: docs # the source that your files originate from
@@ -134,16 +134,16 @@ callouts:
   highlight:
     color: yellow
   important:
-    title: Important
+    title: 重要
     color: blue
   new:
-    title: New
+    title: 新功能
     color: green
   note:
-    title: Note
+    title: 注记
     color: purple
   warning:
-    title: Warning
+    title: 注意
     color: red
 
 # Google Analytics Tracking (optional)

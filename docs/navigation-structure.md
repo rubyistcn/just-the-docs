@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Navigation Structure
+title: 导航结构
 nav_order: 5
 ---
 

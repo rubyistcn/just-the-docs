@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Search
+title: 搜索
 nav_order: 7
 ---
 

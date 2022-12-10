@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Code
-parent: UI Components
+title: 代码
+parent: UI 组件
 has_children: true
 nav_order: 6
 ---

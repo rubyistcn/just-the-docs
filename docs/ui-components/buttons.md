@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Buttons
-parent: UI Components
+title: 按钮
+parent: UI 组件
 nav_order: 2
 ---
 
