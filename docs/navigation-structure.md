@@ -4,12 +4,12 @@ title: 导航结构
 nav_order: 5
 ---
 
-# Navigation Structure
+# 导航结构
 {: .no_toc }
 
 <details open markdown="block">
   <summary>
-    Table of contents
+    目录
   </summary>
   {: .text-delta }
 - TOC
@@ -18,19 +18,19 @@ nav_order: 5
 
 ---
 
-## Main navigation
+## 主导航
 
-The main navigation for your Just the Docs site is on the left side of the page at large screens and on the top (behind a tap) on small screens. The main navigation can be structured to accommodate a multi-level menu system (pages with children and grandchildren).
+Just the Docs 站点的主导航在大屏幕时的左侧（小屏时的顶部）。主导航被设计成了一个可容纳多级菜单的系统（页面可以有子页面以及孙页面）。
 
-By default, all pages will appear as top level pages in the main nav unless a parent page is defined (see [Pages with Children](#pages-with-children)).
+默认情况下，所有页面在主导航中会显示为顶级页面，除非有页面被定页为父页面（参阅[带子页面的页面](#p带子页面的页面)）。
 
 ---
 
-## Ordering pages
+## 页面顺序
 
-To specify a page order, you can use the `nav_order` parameter in your pages' YAML front matter.
+定义页面顺序，您可以在您的页面的 YAML 格式的元数据（Front Matter）中使用 `nav_order` 参数。
 
-#### Example
+#### 示例
 {: .no_toc }
 
 ```yaml
@@ -42,20 +42,19 @@ nav_order: 4
 
 ```
 
-The parameter values determine the order of the top-level pages, and of child pages with the same parent. You can reuse the same parameter values (e.g., integers starting from 1) for the child pages of different parents.
+参数值定义了顶级页面的顺序，以及具有相同父页面的子页面的顺序。您可以对子页面的子页面重复使用这些参数值（例如，从 1 开始的整数）。
 
-The parameter values can be numbers (integers, floats) and/or strings. Pages with numerical `nav_order` parameters always come before those with string `nav_order` parameters. When you omit `nav_order` parameters, they default to the titles of the pages. If you want to make the page order independent of the page titles, you can set explicit `nav_order` parameters on all pages. All pages with explicit `nav_order` parameters
-come before all pages ordered by their `title` values.
+参数值可以是数字（整数，小数）和（或）字符串。带有数字 `nav_order` 参数的页面总是在带有字符 `nav_order` 参数的页面前面。当省略 `nav_order` 参数时，默认使用页面标题顺序。如果您想让页面顺序不依赖页面标题，需要为每个页面设置精准的 `nav_order` 参数。所有具有精准 `nav_order` 参数的页面会出现在依赖 `title` 值排序的页面前面。
 
-By default, all Capital letters come before all lowercase letters; you can add `nav_sort: case_insensitive` in the configuration file to ignore the case. Enclosing strings in (single or double) quotation marks is optional. Numeric values are not enclosed in quotation marks, e.g., `42`, `-1.0`; numbers in quotation marks are lexicographically ordered, so `"10"` comes before `"2"`, for example.
+默认情况下，所有大写字母会出现在小写字母前面；您可以通过在配置文件中添加 `nav_sort: case_insensitive` 来忽略大小写。字符用引号（单引号或双引号）封闭是可选的。数字值不能用引号封闭，例如 `42`、`-1.0`；引号内的数字将会按照字符顺序排列，而不是按照数值大小排列，所以 `"10"` 会在 `"2"` 之前。
 
 ---
 
-## Excluding pages
+## 不包含页面
 
-For specific pages that you do not wish to include in the main navigation, e.g. a 404 page or a landing page, use the `nav_exclude: true` parameter in the YAML front matter for that page.
+对于特定不想包含在主导航中的页面，例如 404 页面或者加载页面，在页面的 YAML 格式元数据中使用 `nav_exclude: true` 参数。
 
-#### Example
+#### 示例
 {: .no_toc }
 
 ```yaml
@@ -67,15 +66,15 @@ nav_exclude: true
 
 ```
 
-The `nav_exclude` parameter does not affect the [auto-generating list of child pages](#auto-generating-table-of-contents), which you can use to access pages excluded from the main navigation.
+`nav_exclude` 参数不影响[自动生成子页面列表](#自动生成目录)。
 
-Pages with no `title` are automatically excluded from the main navigation.
+无 `title` 页面会自动被主导航排除。
 
 ---
 
-## Pages with children
+## 带子页面的页面
 
-Sometimes you will want to create a page with many children (a section). First, it is recommended that you keep pages that are related in a directory together... For example, in these docs, we keep all of the written documentation in the `./docs` directory and each of the sections in subdirectories like `./docs/ui-components` and `./docs/utilities`. This gives us an organization like:
+有时您需要创建一个带有子页面（一系列相关内容）的页面。首先，推荐您将相关页面放在一个目录下……例如，在我们这个文档中，我们将所有编写文档的内容都放在了 `./docs` 目录，并且每一部分都在一个子目录下，像 `./docs/ui-components` 和 `./docs/utilities`。这样看起来组织清晰：
 
 ```
 +-- ..
@@ -104,11 +103,11 @@ Sometimes you will want to create a page with many children (a section). First, 
 +-- ..
 ```
 
-On the parent pages, add this YAML front matter parameter:
+在父页面上，添加 YAML 格式元数据：
 
-- `has_children: true` (tells us that this is a parent page)
+- `has_children: true` （告诉我们这是一个父页面）
 
-#### Example
+#### 示例
 {: .no_toc }
 
 ```yaml
@@ -121,15 +120,15 @@ has_children: true
 
 ```
 
-Here we're setting up the UI Components landing page that is available at `/docs/ui-components`, which has children and is ordered second in the main nav.
+这里我们设置了 UI 组件加载页（位置在 `/docs/ui-components`），该页有子页面，在主导航的顺序为第二位。
 
-### Child pages
+### 子页面
 
 {: .text-gamma }
 
-On child pages, simply set the `parent:` YAML front matter to whatever the parent's page title is and set a nav order (this number is now scoped within the section).
+在子页面里设置 YAML 格式元数据 `parent:` 参数，说明父页面标题，设置导航顺序（此数字仅在同级子页面有效）。
 
-#### Example
+#### 示例
 {: .no_toc }
 
 ```yaml
@@ -142,15 +141,15 @@ nav_order: 2
 
 ```
 
-The Buttons page appears as a child of UI Components and appears second in the UI Components section.
+Buttons 页面做为 UI 组件的子页面出现，并且是 UI 组件部分顺序是第二名。
 
-### Ordering child pages
+### 子页面顺序
 
-You can optionally add the following to the YAML front matter to change the default sort order of child pages from ascending to descending order:
+您可以选择添加下列 YAML 格式元数据修改子页面的默认排序为递增还是递减：
 
 - `child_nav_order: desc`
 
-#### Example
+#### 示例
 {: .no_toc }
 ```yaml
 ---
@@ -160,11 +159,11 @@ child_nav_order: desc
 ---
 ```
 
-### Auto-generating Table of Contents
+### 自动生成目录
 
-By default, all pages with children will automatically append a Table of Contents which lists the child pages after the parent page's content. To disable this auto Table of Contents, set `has_toc: false` in the parent page's YAML front matter.
+默认情况下，所有带有子页面的页面会自动在其页面内容之后生成子页面列表目录。关闭这个自动目录，需要在父页面的 YAML 格式元数据中设置 `has_toc: false`。
 
-#### Example
+#### 示例
 {: .no_toc }
 
 ```yaml
@@ -178,16 +177,16 @@ has_toc: false
 
 ```
 
-### Children with children
+### 带子页面的子页面
 
 {: .text-gamma }
 
-Child pages can also have children (grandchildren). This is achieved by using a similar pattern on the child and grandchild pages.
+子页面也可以有子页面（孙页面），其做法同前面的模式一样，只不过是用在子页面和孙页面之上。
 
-1. Add the `has_children` attribute to the child
-1. Add the `parent` and `grand_parent` attribute to the grandchild
+1. 添加 `has_children` 属性到子页面
+1. 添加 `parent` 和 `grand_parent` 属性到孙页面
 
-#### Example
+#### 示例
 {: .no_toc }
 
 ```yaml
@@ -212,7 +211,7 @@ nav_order: 1
 
 ```
 
-This would create the following navigation structure:
+这将生成下列导航结构：
 
 ```
 +-- ..
@@ -229,15 +228,15 @@ This would create the following navigation structure:
 ```
 
 {: .note }
-Currently, the navigation structure is limited to 3 levels: grandchild pages cannot themselves have child pages.
+当前导航结构限于 3 级：孙页面不能再有子页面。
 
 ---
 
-## Auxiliary Links
+## 附属链接
 
-To add auxiliary links to your site (in the upper right on all pages), add it to the `aux_links` [configuration option]({{ site.baseurl }}{% link docs/configuration.md %}#aux-links) in your site's `_config.yml` file.
+为您的站点添加附属链接（在所有页面右上方），只需在您的站点的配置文件 `_config.yml` 中添加 `aux_links` [配置选项]({{ site.baseurl }}{% link docs/configuration.md %}#附属链接)即可。
 
-#### Example
+#### 示例
 {: .no_toc }
 
 ```yaml
@@ -249,12 +248,12 @@ aux_links:
 
 ---
 
-## External Navigation Links
+## 外部导航链接
 
-To add external links to the navigation, add them to the `nav_external_links` [configuration]({{ site.baseurl }}{% link docs/configuration.md %}) option in your site's `_config.yml` file.
-External links will appear in the navigation after the links to ordinary pages, but before any collections.
+为导航添加外部链接，需要在站点配置文件 `_config.yml` 中添加 `nav_external_links` [配置]({{ site.baseurl }}{% link docs/configuration.md %})选项。
+外部链接会出现在导航的普通页面链接之后，专题之前。
 
-#### Example
+#### 示例
 {: .no_toc }
 
 ```yaml
@@ -265,16 +264,16 @@ nav_external_links:
     hide_icon: false # set to true to hide the external link icon - defaults to false
 ```
 
-The external links are decorated by an icon, which distinguishes them from internal links.
-You can suppress the icon by setting `hide_icon: true`.
+外部链接会有一个标志链接会离开站点的装饰图标。
+您可以通过设置 `hide_icon: true` 来隐藏图标。
 
 ---
 
-## In-page navigation with Table of Contents
+## 带目录的页内导航
 
-To generate a Table of Contents on your docs pages, you can use the `{:toc}` method from Kramdown, immediately after an `<ol>` in Markdown. This will automatically generate an ordered list of anchor links to various sections of the page based on headings and heading levels. There may be occasions where you're using a heading and you don't want it to show up in the TOC, so to skip a particular heading use the `{: .no_toc }` CSS class.
+在您的文档页面内生成目录，您可以在 Markdown 的 `<ol>` 方法后马上使用 Kramdown 的 `{:toc}` 方法。这会自动生成一个根据页面的标题和层级相关的带有锚点链接各章节的有序列表。有些时候，有的标题您并不想让其出现在目录中，那么您就可以通过对该标题使用 `{: .no_toc }` CSS 类就可以在生成目录时忽略它。
 
-#### Example
+#### 示例
 {: .no_toc }
 
 ```markdown
@@ -288,11 +287,11 @@ To generate a Table of Contents on your docs pages, you can use the `{:toc}` met
 {:toc}
 ```
 
-This example skips the page name heading (`#`) from the TOC, as well as the heading for the Table of Contents itself (`##`) because it is redundant, followed by the table of contents itself. To get an unordered list, replace `1. TOC` above by `- TOC`.
+本示例在生成目录时忽略了页面的名字标题（`#`），同样的还有目录标题自身（`##`）（因为它对于页面内容而言是多余的）。要想得到一个无序列表，用 `- TOC` 替换 `1. TOC` 即可。
 
-### Collapsible Table of Contents
+### 可折叠目录
 
-The Table of Contents can be made collapsible using the `<details>` and `<summary>` elements , as in the following example. The attribute `open` (expands the Table of Contents by default) and the styling with `{: .text-delta }` are optional.
+目录用 `<details>` 和 `<summary>` 元素打造成了可折叠的，如下例。属性 `open` （目录默认是展开的）和使用样式 `{: .text-delta }` 是可选的。
 
 ```markdown
 <details open markdown="block">
@@ -305,4 +304,4 @@ The Table of Contents can be made collapsible using the `<details>` and `<summar
 </details>
 ```
 
-The result is shown at [the top of this page](#navigation-structure) (`{:toc}` can be used only once on each page).
+最终效果见[本页顶部](#导航结构)（`{:toc}` 每页只能用一次）。
