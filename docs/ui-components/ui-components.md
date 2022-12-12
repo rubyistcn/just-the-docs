@@ -6,7 +6,7 @@ has_children: true
 permalink: /docs/ui-components
 ---
 
-# UI Components
+# UI 组件
 
-To make it as easy as possible to write documentation in plain Markdown, most UI components are styled using default Markdown elements with few additional CSS classes needed.
+大量通过默认的 Markdown 元素加上扩展的 CSS 类而被定制的 UI 组件使编写文档（通过简洁的 Markdow 标记语言）尽可能简单易用。
 {: .fs-6 .fw-300 }

@@ -20,28 +20,28 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 });
 </script>
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+文字可以是 **粗体**，_斜体_，或者 ~~划线~~。
 
-[Link to another page](another-page).
+[链接到另一个页面](another-page).
 
-There should be whitespace between paragraphs.
+两个段落之间应该留下空行。
 
-There should be whitespace between paragraphs. We recommend including a README, or a file with information about your project.
+两个段落之间应该留下空行。我们推荐包含一个 README，或者一个关于您的项目信息的文件。
 
-# [](#header-1)Header 1
+# [](#标题-1)标题 1
 
-This is a normal paragraph following a header. GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+这是一个标题下的普通段落。GitHub 是一个基于版本控制和协作的代码托管平台。它能让您随时随地都可以都可以参与到项目工作中。
 
-## [](#header-2)Header 2
+## [](#标题-2)标题 2
 
-> This is a blockquote following a header.
+> 这是一个标题下的块引用（blockquote）。
 >
-> When something is important enough, you do it even if the odds are not in your favor.
+> 君子有所为有所不为。知其可为而为之，知其不可为而不为，是谓君子为与不为之道也。不知不可为而为之，愚人也；知其不可为而不为，贤人也；知其不可为而为之，圣人也。
 
-### [](#header-3)Header 3
+### [](#标题-3)标题 3
 
 ```js
-// Javascript code with syntax highlighting.
+// 带语法高亮的 Javascript 代码
 var fun = function lang(l) {
   dateformat.i18n = require('./lang/' + l)
   return true;
@@ -49,76 +49,74 @@ var fun = function lang(l) {
 ```
 
 ```ruby
-# Ruby code with syntax highlighting
+# 带语法高亮的 Ruby 代码
 GitHubPages::Dependencies.gems.each do |gem, version|
   s.add_dependency(gem, "= #{version}")
 end
 ```
 
-#### [](#header-4)Header 4 `with code not transformed`
+#### [](#标题-4)标题 4 `带有不变形代码`
 
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
-*   This is an unordered list following a header.
+*   这是一个标题下的无序列表。
+*   这是一个标题下的无序列表。
+*   这是一个标题下的无序列表。
 
-##### [](#header-5)Header 5
+##### [](#标题-5)标题 5
 
-1.  This is an ordered list following a header.
-2.  This is an ordered list following a header.
-3.  This is an ordered list following a header.
+1.  这是一个标题下的有序列表。
+2.  这是一个标题下的有序列表。
+3.  这是一个标题下的有序列表。
 
-###### [](#header-6)Header 6
+###### [](#标题-6)标题 6
 
-[This is a very long link which wraps and therefore doesn't overflow
-even when it comes at the beginning](.) of the line.
+[这是一个用来演示被封装到一起的非常非常非常长的文字描述虽然它很长很长它可能会回行但是不会导致溢出](.)的行。
 
-- [This is a very long link which wraps and therefore doesn't overflow the line
-  when used first in an item ](.) in a list.
+- [这是一个用来演示被封装到一起的非常非常非常长的文字描述虽然它很长很长它可能会回行但是不会导致溢出](.)的列表。
 
-| head1        | head two          | three |
+| 表头 1       | 表头 2             | 3    |
 |:-------------|:------------------|:------|
 | ok           | good swedish fish | nice  |
 | out of stock | good and plenty   | nice  |
 | ok           | good `oreos`      | hmm   |
 | ok           | good `zoute` drop | yumm  |
 
-### There's a horizontal rule below this.
+### 下面是一条水平线
 
 * * *
 
-### Here is an unordered list:
+### 这是一个无序列表：
 
 *   Item foo
 *   Item bar
 *   Item baz
 *   Item zip
 
-### And an ordered list:
+### 和一个有序列表：
 
 1.  Item one
 1.  Item two
 1.  Item three
 1.  Item four
 
-### And an ordered list, continued:
+### 和一个有序列表，继续：
 
 1.  Item one
 1.  Item two
 
-Some text
+一些文字
 
 {:style="counter-reset:none"}
 1.  Item three
 1.  Item four
 
-### And an ordered list starting from 42:
+### 和一个始于 42 的有序列表：
 
 {:style="counter-reset:step-counter 41"}
 1.  Item 42
 1.  Item 43
 1.  Item 44
 
-### And a nested list:
+### 和一个嵌套的列表：
 
 - level 1 item
   - level 2 item
@@ -134,7 +132,7 @@ Some text
   - level 2 item
 - level 1 item
 
-### Nesting an ol in ul in an ol
+### 在一个无序列表里嵌套一个有序列表，然后在有序列表里又嵌套一个无序列表
 
 - level 1 item (ul)
   1. level 2 item (ol)
@@ -152,13 +150,13 @@ Some text
     - level 3 item (ul)
 - level 1 item (ul)
 
-### And a task list
+### 和一个任务单
 
 - [ ] Hello, this is a TODO item
 - [ ] Hello, this is another TODO item
 - [x] Goodbye, this item is done
 
-### Nesting task lists
+### 嵌套的任务单
 
 - [ ] level 1 item (task)
    - [ ] level 2 item (task)
@@ -166,7 +164,7 @@ Some text
 - [ ] level 1 item (task)
 - [ ] level 1 item (task)
 
-### Nesting a ul in a task list
+### 在一个任务列表里嵌套无序列表
 
 - [ ] level 1 item (task)
    - level 2 item (ul)
@@ -174,7 +172,7 @@ Some text
 - [ ] level 1 item (task)
 - [ ] level 1 item (task)
 
-### Nesting a task list in a ul
+### 在一个无序列表里嵌套任务列表
 
 - level 1 item (ul)
    - [ ] level 2 item (task)
@@ -182,17 +180,17 @@ Some text
 - level 1 item (ul)
 - level 1 item (ul)
 
-### Small image
+### 小图
 
 ![](../../assets/images/small-image.jpg)
 
-### Large image
+### 大图
 
 ![](../../assets/images/large-image.jpg)
 
 "[Wroclaw University Library digitizing rare archival texts](https://www.flickr.com/photos/97810305@N08/9401451269)" by [j_cadmus](https://www.flickr.com/photos/97810305@N08) is marked with [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/?ref=openverse).
 
-### Labels
+### 标签
 
 I'm a label
 {: .label }
@@ -215,7 +213,7 @@ red
 ***bold + italic***
 {: .label }
 
-### Definition lists can be used with HTML syntax.
+### 基于 HTML 语法的定义列表。
 
 <dl>
 <dt>Name</dt>
@@ -228,7 +226,7 @@ red
 <dd>Green</dd>
 </dl>
 
-#### Multiple description terms and values
+#### 多个描述术语和值
 
 Term
 : Brief description of Term
@@ -257,7 +255,7 @@ Term2
 : Second description of Term1 and Term2,
   possibly more than one line
 
-### More code
+### 更多代码
 
 ```python{% raw %}
 def dump_args(func):
@@ -295,12 +293,12 @@ class conditions(object):
 {% endraw %}```
 
 ```
-Long, single-line code blocks should not wrap. They should horizontally scroll if they are too long. This line should be long enough to demonstrate this.
+如果单行的代码块很长很长时不应该封装。当单行代码太长时它们应该使呈现为水平滚动状态。本行就是要增加长度到很长很长，现在应该是足够长了，可以演示这个功能了。
 ```
 
-### Mermaid Diagrams
+### Mermaid 图表
 
-The following code is displayed as a diagram only when a `mermaid` key supplied in `_config.yml`.
+当 `mermaid` 值在 `_config.yml` 里设定时，下列代码显示为一个图表。
 
 ```mermaid
 graph TD;
@@ -312,5 +310,5 @@ graph TD;
 
 
 ```
-The final element.
+最后一个元素。
 ```

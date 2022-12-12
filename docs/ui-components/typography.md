@@ -5,10 +5,10 @@ parent: UI 组件
 nav_order: 1
 ---
 
-# Typography
+# 排版
 {: .no_toc }
 
-## Table of contents
+## 目录
 {: .no_toc .text-delta }
 
 1. TOC

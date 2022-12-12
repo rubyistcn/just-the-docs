@@ -7,7 +7,7 @@ nav_order: 2
 # 配置
 {: .no_toc }
 
-Just the Docs 有些特定配置参数可在您的 Jekyll 站点的 \_config.yml 文件中配置。
+Just the Docs 有些特定参数可在您的 Jekyll 站点的 \_config.yml 文件中配置。
 {: .fs-6 .fw-300 }
 
 ## 目录
