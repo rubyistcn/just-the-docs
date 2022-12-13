@@ -12,7 +12,7 @@ permalink: /
 Just the Docs 用一款易定制、可在 GitHub Pages 托管的自适应 Jekyll 主题助力您的文档编写。
 {: .fs-6 .fw-300 }
 
-[即刻上手](#getting-started){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
+[即刻上手](#起步){: .btn .btn-primary .fs-5 .mb-4 .mb-md-0 .mr-2 }
 [在 GitHub 查看源码][Just the Docs 源码库]{: .btn .fs-5 .mb-4 .mb-md-0 }
 
 ---

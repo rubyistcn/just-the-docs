@@ -4,10 +4,10 @@ title: 搜索
 nav_order: 7
 ---
 
-# Search
+# 搜索
 {: .no_toc }
 
-## Table of contents
+## 目录
 {: .no_toc .text-delta }
 
 1. TOC
@@ -15,17 +15,15 @@ nav_order: 7
 
 ---
 
-Just the Docs uses [lunr.js](http://lunrjs.com) to add a client-side search interface powered by a JSON index that Jekyll generates.
-All search results are shown in an auto-complete style interface (there is no search results page).
-By default, all generated HTML pages are indexed using the following data points:
+Just the Docs 使用 [lunr.js](http://lunrjs.com) 添加了客户端的由 Jekyll 生成的基于 JSON 的索引的搜索界面。所有搜索结果以一个自动完成的样式界面显示（没有搜索结果页面）。默认情况下，所有生成的 HTML 页面通过下面数据点来索引：
 
 - Page title
 - Page content
 - Page URL
 
-## Enable search in configuration
+## 在配置中启用搜索
 
-In your site's `_config.yml`, enable search:
+在您的站点的 `_config.yml` 中启用搜索：
 
 ```yaml
 # Enable or disable the site search

@@ -4,10 +4,10 @@ title: 定制
 nav_order: 6
 ---
 
-# Customization
+# 定制
 {: .no_toc }
 
-## Table of contents
+## 目录
 {: .no_toc .text-delta }
 
 1. TOC
@@ -15,18 +15,18 @@ nav_order: 6
 
 ---
 
-## Color schemes
+## 颜色方案
 
 {: .d-inline-block }
 
-New
+新
 {: .label .label-green }
 
-Just the Docs supports two color schemes: light (default), and dark.
+Just the Docs 支持两种颜色方案：亮色（默认）和暗色。
 
-To enable a color scheme, set the `color_scheme` parameter in your site's `_config.yml` file:
+启用一个颜色方案，在您站点的 `_config.yml` 文件中设置 `color_scheme` 参数：
 
-#### Example
+#### 示例
 {: .no_toc }
 
 ```yaml
@@ -34,7 +34,7 @@ To enable a color scheme, set the `color_scheme` parameter in your site's `_conf
 color_scheme: dark
 ```
 
-<button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
+<button class="btn js-toggle-dark-mode">预览暗色方案</button>
 
 <script>
 const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
@@ -42,17 +42,17 @@ const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
 jtd.addEvent(toggleDarkMode, 'click', function(){
   if (jtd.getTheme() === 'dark') {
     jtd.setTheme('light');
-    toggleDarkMode.textContent = 'Preview dark color scheme';
+    toggleDarkMode.textContent = '预览暗色方案';
   } else {
     jtd.setTheme('dark');
-    toggleDarkMode.textContent = 'Return to the light side';
+    toggleDarkMode.textContent = '返回亮色方案';
   }
 });
 </script>
 
-## Custom schemes
+## 定制方案
 
-### Define a custom scheme
+### 定义一个定制方案
 
 You can add custom schemes.
 If you want to add a scheme named `foo` (can be any name) just add a file `_sass/color_schemes/foo.scss` (replace `foo` by your scheme name)
@@ -73,7 +73,7 @@ Available variables are listed in the [\_variables.scss](https://github.com/just
 
 For example, to change the link color from the purple default to blue, include the following inside your scheme file:
 
-#### Example
+#### 示例
 {: .no_toc }
 
 ```scss
@@ -87,7 +87,7 @@ Instead, each variable that relies on previously-cascaded values must be manuall
 _Note:_ Editing the variables directly in `_sass/support/variables.scss` is not recommended and can cause other dependencies to fail.
 Please use scheme files.
 
-### Use a custom scheme
+### 使用一个定制方案
 
 To use the custom color scheme, only set the `color_scheme` parameter in your site's `_config.yml` file:
 
@@ -95,7 +95,7 @@ To use the custom color scheme, only set the `color_scheme` parameter in your si
 color_scheme: foo
 ```
 
-### Switchable custom scheme
+### 可转换的定制方案
 
 If you want to be able to change the scheme dynamically, for example via javascript, just add a file `assets/css/just-the-docs-foo.scss` (replace `foo` by your scheme name)
 with the following content:
@@ -112,7 +112,7 @@ This allows you to switch the scheme via the following javascript.
 jtd.setTheme("foo")
 ```
 
-## Override and completely custom styles
+## 覆盖和完全定制样式
 
 For styles that aren't defined as variables, you may want to modify specific CSS classes.
 Additionally, you may want to add completely custom CSS specific to your content.
@@ -121,7 +121,7 @@ This will allow for all overrides to be kept in a single file, and for any upstr
 
 For example, if you'd like to add your own styles for printing a page, you could add the following styles.
 
-#### Example
+#### 示例
 {: .no_toc }
 
 ```scss
@@ -138,7 +138,7 @@ For example, if you'd like to add your own styles for printing a page, you could
 }
 ```
 
-## Override includes
+## 覆盖包含
 
 You can customize the theme by overriding any of the custom [Jekyll includes](https://jekyllrb.com/docs/includes/) files that it provides.
 
@@ -146,13 +146,13 @@ To do this, create an `_includes` directory and make a copy of the specific file
 
 Just the Docs provides the following custom includes files:
 
-### Custom TOC Heading
+### 定制 TOC 标题
 
 `_includes/toc_heading_custom.html`
 
 If the page has any child pages, and `has_toc` is not set to `false`, this content appears as a heading above the [auto-generating list of child pages]({{ site.baseurl }}{% link docs/navigation-structure.md %}#auto-generating-table-of-contents) after the page's content.
 
-#### Example
+#### 示例
 {: .no_toc }
 
 To change the default TOC heading to "Contents", create `_includes/toc_heading_custom.html` and add:
@@ -162,19 +162,19 @@ To change the default TOC heading to "Contents", create `_includes/toc_heading_c
 
 The (optional) `text-delta` class makes the heading appear as **Contents**{:.text-delta} .
 
-### Custom Footer
+### 定制 Footer
 
 `_includes/footer_custom.html`
 
 This content appears at the bottom of every page's main content. More info for this include can be found in the [Configuration - Footer content]({{ site.baseurl }}{% link docs/configuration.md %}#footer-content).
 
-### Custom Head
+### 定制 Head
 
 `_includes/head_custom.html`
 
 Any HTML added to this file will be inserted before the closing `<head>` tag. This might include additional `<meta>`, `<link>`, or `<script>` tags.
 
-#### Example
+#### 示例
 {: .no_toc }
 
 To add a custom favicon, create `_includes/head_custom.html` and add:
@@ -182,19 +182,19 @@ To add a custom favicon, create `_includes/head_custom.html` and add:
 <link rel="shortcut icon" type="image/png" href="{{site.baseurl}}/path/to/your/favicon.png">
 ```
 
-### Custom Header
+### 定制 Header
 
 `_includes/header_custom.html`
 
 Content added to this file appears at the top of every page's main content between the site search and auxiliary links if they are enabled. If `search_enabled` were set to false and `aux_links` were removed, the content of `header_custom.html` would occupy the space at the top of every page.
 
-### Custom Nav Footer
+### 定制 Nav Footer
 
 `_includes/nav_footer_custom.html`
 
 Any content added to this file will appear at the bottom left of the page below the site's navigation. By default an attribution to Just the Docs is displayed which reads, `This site uses Just the Docs, a documentation theme for Jekyll.`.
 
-### Custom Search Placeholder
+### 定制搜索占位符
 
 `_includes/search_placeholder_custom.html`
 
