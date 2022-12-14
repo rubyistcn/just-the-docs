@@ -4,10 +4,10 @@ title: 排版
 parent: 工具
 ---
 
-# Typography Utilities
+# 排版工具
 {: .no_toc }
 
-## Table of contents
+## 目录
 {: .no_toc .text-delta }
 
 1. TOC
@@ -15,11 +15,11 @@ parent: 工具
 
 ---
 
-## Font size
+## 字体型号
 
-Use the `.fs-1` - `.fs-10` to set an explicit font-size.
+使用 `.fs-1` - `.fs-10` 精准设置字体型号。
 
-| Class   | Small screen size `font-size`  | Large screen size `font-size` |
+| 类      | 小屏幕型号 `font-size`          | 大屏幕型号 `font-size`         |
 |:--------|:-------------------------------|:------------------------------|
 | `.fs-1` | 9px                            | 10px                          |
 | `.fs-2` | 11px                           | 12px                          |
@@ -55,7 +55,7 @@ Font size 10
 {: .fs-10 }
 </div>
 ```markdown
-In Markdown, use the `{: }` wrapper to apply custom classes:
+在 Markdown 中，用 `{: }` 封装应用定制类：
 
 Font size 1
 {: .fs-1 }
@@ -79,9 +79,9 @@ Font size 10
 {: .fs-10 }
 ```
 
-## Font weight
+## 字体粗细
 
-Use the `.fw-300` - `.fw-700` to set an explicit font-size.
+用 `.fw-300` - `.fw-700` 精准设置字体型号。
 
 <div class="code-example" markdown="1">
 Font weight 300
@@ -94,7 +94,7 @@ Font weight 700
 {: .fw-700 }
 </div>
 ```markdown
-In Markdown, use the `{: }` wrapper to apply custom classes:
+在 Markdown 中，用 `{: }` 封装应用定制类：
 
 Font weight 300
 {: .fw-300 }
@@ -106,15 +106,15 @@ Font weight 700
 {: .fw-700 }
 ```
 
-## Line height
+## 行高
 
-Use the `lh-` classes to explicitly apply line height to text.
+使用 `lh-` 类精准设定文字的行高。
 
-| Class         | `line-height` value  | Notes                         |
+| 类            | `line-height` 值     | 注释                          |
 |:--------------|:---------------------|:------------------------------|
 | `.lh-0`       | 0                    |                               |
-| `.lh-tight`   | 1.1                  | Default for headings          |
-| `.lh-default` | 1.4                  | Default for body (paragraphs) |
+| `.lh-tight`   | 1.1                  | 标题默认值                     |
+| `.lh-default` | 1.4                  | 正文默认值（段落）             |
 
 <div class="code-example" markdown="1">
 No Line height
@@ -130,7 +130,7 @@ Default line height
 {: .fh-default }
 </div>
 ```markdown
-In Markdown, use the `{: }` wrapper to apply custom classes:
+在 Markdown 中，用 `{: }` 封装应用定制类：
 
 No Line height
 No Line height
@@ -145,9 +145,9 @@ Default line height
 {: .fh-default }
 ```
 
-## Text justification
+## 文本调整
 
-By default text is justified left. Use these `text-` classes to override settings:
+默认文本会左对齐。使用这些 `text-` 类覆盖默认设置：
 
 | Class          | What it does         |
 |:---------------|:---------------------|

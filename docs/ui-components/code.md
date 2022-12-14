@@ -6,10 +6,10 @@ has_children: true
 nav_order: 6
 ---
 
-# Code
+# 代码
 {: .no_toc }
 
-## Table of contents
+## 目录
 {: .no_toc .text-delta }
 
 1. TOC
@@ -17,14 +17,14 @@ nav_order: 6
 
 ---
 
-## Inline code
+## 行内代码
 
-Code can be rendered inline by wrapping it in single back ticks.
+代码可通过用单个反引号封装实现行内渲染。
 
 <div class="code-example" markdown="1">
 Lorem ipsum dolor sit amet, `<inline code snippet>` adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
-## Heading with `<inline code snippet>` in it.
+## 带`<行内代码片段>`的标题。
 {: .no_toc }
 </div>
 ```markdown
@@ -35,9 +35,9 @@ Lorem ipsum dolor sit amet, `<inline code snippet>` adipisicing elit, sed do eiu
 
 ---
 
-## Syntax highlighted code blocks
+## 语法高亮代码块
 
-Use Jekyll's built-in syntax highlighting with Rouge for code blocks by using three backticks, followed by the language name:
+通过使用三个反引号加语言名称可以使用 Jekyll 内建的 Rouge 语法高亮代码功能：
 
 <div class="code-example" markdown="1">
 ```js
@@ -60,9 +60,9 @@ var fun = function lang(l) {
 
 ---
 
-## Code blocks with rendered examples
+## 带渲染示例的代码块
 
-To demonstrate front end code, sometimes it's useful to show a rendered example of that code. After including the styles from your project that you'll need to show the rendering, you can use a `<div>` with the `code-example` class, followed by the code block syntax. If you want to render your output with Markdown instead of HTML, use the `markdown="1"` attribute to tell Jekyll that the code you are rendering will be in Markdown format... This is about to get meta...
+要演示前端代码，有时展示一个渲染的示例更有用。After including the styles from your project that you'll need to show the rendering, you can use a `<div>` with the `code-example` class, followed by the code block syntax. If you want to render your output with Markdown instead of HTML, use the `markdown="1"` attribute to tell Jekyll that the code you are rendering will be in Markdown format... This is about to get meta...
 
 <div class="code-example" markdown="1">
 
@@ -89,11 +89,11 @@ To demonstrate front end code, sometimes it's useful to show a rendered example 
 
 ---
 
-## Mermaid diagram code blocks
+## Mermaid 图表代码块
 
-[Mermaid](https://mermaid-js.github.io/mermaid/) allows you to add diagrams and visualizations using Markdown code blocks. **It is disabled by default**. However, you can turn on support for mermaid by adding a `mermaid` key to your `_config.yml`.
+[Mermaid](https://mermaid-js.github.io/mermaid/) 允许您通过 Markdown 代码块添加图表和可视化。**默认不支持**。然而，您可以通过在 `_config.yml` 添加一个 `mermaid` 值使其支持 Mermaid。
 
-The minimum configuration requires a `version` key (matching a version in [jsDelivr](https://cdn.jsdelivr.net/npm/mermaid/)):
+最小配置需要一个 `version` 值（在 [jsDelivr](https://cdn.jsdelivr.net/npm/mermaid/)匹配版本）：
 
 ```yaml
 mermaid:
@@ -102,16 +102,16 @@ mermaid:
   version: "9.1.3"
 ```
 
-Additional configuration options are loaded through `_includes/mermaid_config.js`. By default, the contents of the file are the empty object:
+更多配置选项加载可通过 `_includes/mermaid_config.js` 进行。默认情况下，文件内容是空对象：
 
 ```js
 // _includes/mermaid_config.js
 {}
 ```
 
-This loads the default settings.
+这将加载默认设置。
 
-The contents of this object should follow [mermaid's configuration API](https://mermaid-js.github.io/mermaid/#/./Setup?id=configuration). For example, to override the theme, change `_includes/mermaid_config.js` to:
+对象内容应遵循 [Mermaid's 配置 API](https://mermaid-js.github.io/mermaid/#/./Setup?id=configuration)。例如，覆盖主题，修改 `_includes/mermaid_config.js` 为：
 
 ```js
 // _includes/mermaid_config.js
@@ -120,7 +120,7 @@ The contents of this object should follow [mermaid's configuration API](https://
 }
 ```
 
-Once mermaid is installed, it can be used in markdown files. The markdown for a simple flowchart example might look like the following:
+一旦 Mermaid 安装成功，就可以在 Markdown 文件中使用。用 Markdown 做一个简单的流程图示例应该像这样：
 
 {% highlight markdown %}
 ```mermaid
@@ -132,7 +132,7 @@ graph TD;
 ```
 {% endhighlight %}
 
-which renders:
+渲染为：
 
 ```mermaid
 graph TD;
@@ -142,4 +142,4 @@ graph TD;
     C-->D;
 ```
 
-*Note: for demonstration purposes, we've enabled mermaid on this site. It is still disabled by default, and users need to opt-in to use it.*
+*注记：基于演示原因，我们在此站点启用了 Mermaid。默认它还是关闭的，用户需要使用时还需要选择性开启。*

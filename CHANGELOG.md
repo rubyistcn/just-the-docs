@@ -3,7 +3,7 @@ title: 版本备注
 layout: default
 ---
 
-# CHANGELOG
+# 版本备注
 
 All notable changes to this project are documented in this file.
 

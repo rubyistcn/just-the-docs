@@ -5,9 +5,9 @@ parent: UI 组件
 nav_order: 4
 ---
 
-# Tables
+# 表格
 
-Tables are responsive by default, allowing wide tables to have a horizontal scroll to access columns outside of the normal viewport.
+表格默认是自适应的，允许宽幅表格有水平滚动条以查看普通视口之外的栏位。
 
 <div class="code-example" markdown="1">
 

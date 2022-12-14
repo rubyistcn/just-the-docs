@@ -54,24 +54,22 @@ jtd.addEvent(toggleDarkMode, 'click', function(){
 
 ### 定义一个定制方案
 
-You can add custom schemes.
-If you want to add a scheme named `foo` (can be any name) just add a file `_sass/color_schemes/foo.scss` (replace `foo` by your scheme name)
-where you override theme variables to change colors, fonts, spacing, etc.
+您可以添加定制方案。如果您想添加的定制方案叫做 `foo`（名字可以任意），只需添加一个 `_sass/color_schemes/foo.scss` 文件（当然，要用您给的名字替换掉 `foo`），在该文件中通过重写主题的变量名来修改颜色、字体、间距等。
 
 {: .note }
-Since the default color scheme is `light`, your custom scheme is implicitly based on the variable settings used by the `light` scheme.
+由于默认颜色方案时 `light`，您的定制方案也就会基于 `light` 方案的变量名进行修改。
 
-If you want your custom scheme to be based on the `dark` scheme, you need to start your file with the following line:
+如果您想基于 `dark` 方案进行修改，您需要用下面的操作开始您的文件：
 
 ```scss
 @import "./color_schemes/dark";
 ```
 
-You can define custom schemes based on other custom schemes in the same way.
+您可以用同样的方式基于其它定制方案定义您自己的定制方案。
 
-Available variables are listed in the [\_variables.scss](https://github.com/just-the-docs/just-the-docs/tree/main/_sass/support/_variables.scss) file.
+可用变量在 [\_variables.scss](https://github.com/just-the-docs/just-the-docs/tree/main/_sass/support/_variables.scss) 文件中列出。
 
-For example, to change the link color from the purple default to blue, include the following inside your scheme file:
+例如，修改链接颜色从紫色变为蓝色，在您的方案文件中包含下面代码：
 
 #### 示例
 {: .no_toc }
@@ -80,16 +78,16 @@ For example, to change the link color from the purple default to blue, include t
 $link-color: $blue-000;
 ```
 
-Keep in mind that changing a variable will not automatically change the value of other variables that depend on it.
-For example, the default link color (`$link-color`) is set to `$purple-000`. However, redefining `$purple-000` in a custom color scheme will not automatically change `$link-color` to match it.
-Instead, each variable that relies on previously-cascaded values must be manually reimplemented by copying the dependent rules from `_variables.scss` — in this case, rewriting `$link-color: $purple-000;`.
+注意修改变量不会自动修改其他依赖的变量的值。
+例如，默认链接颜色 (`$link-color`) 设定为 `$purple-000`。然而，在定制颜色方案中重新定义 `$purple-000` 并不会自动改变 `$link-color` 的颜色去匹配修改后的颜色。
+相反，每个依赖以前级联值的变量必须手动通过从 `_variables.scss` 复制依赖规则才能重载实现修改。在这个示例中，需要重写 `$link-color: $purple-000;`。
 
-_Note:_ Editing the variables directly in `_sass/support/variables.scss` is not recommended and can cause other dependencies to fail.
-Please use scheme files.
+_注意：_ 不推荐直接在 `_sass/support/variables.scss` 中编辑变量，可能会引起其他依赖项出错。
+请用方案文件。
 
 ### 使用一个定制方案
 
-To use the custom color scheme, only set the `color_scheme` parameter in your site's `_config.yml` file:
+使用定制颜色方案，只需在您的站点  `_config.yml` 文件中设置 `color_scheme` 参数：
 
 ```yaml
 color_scheme: foo
@@ -97,8 +95,7 @@ color_scheme: foo
 
 ### 可转换的定制方案
 
-If you want to be able to change the scheme dynamically, for example via javascript, just add a file `assets/css/just-the-docs-foo.scss` (replace `foo` by your scheme name)
-with the following content:
+如果您想使用能够动态转换的颜色方案，例如通过 JavaScript 实现，只需添加一个文件 `assets/css/just-the-docs-foo.scss`（用您自己给的方案名字取代 `foo`），文件内容如下：
 
 {% raw %}
     ---
@@ -114,12 +111,12 @@ jtd.setTheme("foo")
 
 ## 覆盖和完全定制样式
 
-For styles that aren't defined as variables, you may want to modify specific CSS classes.
-Additionally, you may want to add completely custom CSS specific to your content.
-To do this, put your styles in the file `_sass/custom/custom.scss`.
-This will allow for all overrides to be kept in a single file, and for any upstream changes to still be applied.
+对于没有定义的变量的样式，您可能想要修改特定的 CSS 类。
+此外，您可能想要添加全部的 CSS 到您的内容里。
+要想这么做，把您的样式放进 `_sass/custom/custom.scss` 文件。
+这样做会使您的所有复写都放进一个单独的文件，还能保证对上游修改的应用。
 
-For example, if you'd like to add your own styles for printing a page, you could add the following styles.
+例如，如果您想要添加您自己的样式来打印页面，您可以添加下面的样式。
 
 #### 示例
 {: .no_toc }
@@ -140,44 +137,44 @@ For example, if you'd like to add your own styles for printing a page, you could
 
 ## 覆盖包含
 
-You can customize the theme by overriding any of the custom [Jekyll includes](https://jekyllrb.com/docs/includes/) files that it provides.
+您可以通过覆盖任何已提供的定制的 [Jekyll 包含](https://jekyllrb.com/docs/includes/)文件来定制主题。
 
-To do this, create an `_includes` directory and make a copy of the specific file you wish to modify. The content in this file will override the theme defaults. You can learn more about this process in the Jekyll docs for [Overriding theme defaults](https://jekyllrb.com/docs/themes/#overriding-theme-defaults).
+要这么做，创建一个 `_includes` 目录，在创建您想要修改的特定文件——文件内容将覆盖掉主题默认内容。更多信息参阅 Jekyll 文档中[覆盖默认主题](https://jekyllrb.com/docs/themes/#overriding-theme-defaults)部分。
 
-Just the Docs provides the following custom includes files:
+Just the Docs 提供下列可定制的包含文件：
 
 ### 定制 TOC 标题
 
 `_includes/toc_heading_custom.html`
 
-If the page has any child pages, and `has_toc` is not set to `false`, this content appears as a heading above the [auto-generating list of child pages]({{ site.baseurl }}{% link docs/navigation-structure.md %}#auto-generating-table-of-contents) after the page's content.
+如果页面有子页面，`has_toc` 未设置 `false`，则会在页面内容最后会[自动生成子页面列表]({{ site.baseurl }}{% link docs/navigation-structure.md %}#auto-generating-table-of-contents)，而列表上边就会出现 TOC 标题——也就是目录标题。
 
 #### 示例
 {: .no_toc }
 
-To change the default TOC heading to "Contents", create `_includes/toc_heading_custom.html` and add:
+修改默认 TOC 标题为“目录”，创建 `_includes/toc_heading_custom.html`，然后添加：
 ```html
-<h2 class="text-delta">Contents</h2>
+<h2 class="text-delta">目录</h2>
 ```
 
-The (optional) `text-delta` class makes the heading appear as **Contents**{:.text-delta} .
+`text-delta` 类（可选）是标题显示为 **目录**{:.text-delta}。
 
 ### 定制 Footer
 
 `_includes/footer_custom.html`
 
-This content appears at the bottom of every page's main content. More info for this include can be found in the [Configuration - Footer content]({{ site.baseurl }}{% link docs/configuration.md %}#footer-content).
+本内容出现在每一个主内容之后页面的最下端。更多有关此包含文件信息参阅[配置——Footer 内容]({{ site.baseurl }}{% link docs/configuration.md %}#footer-content)。
 
 ### 定制 Head
 
 `_includes/head_custom.html`
 
-Any HTML added to this file will be inserted before the closing `<head>` tag. This might include additional `<meta>`, `<link>`, or `<script>` tags.
+添加到这个文件的任何 HTML 都会被插入到 `<head>` 标签关闭之前。这可能包含 `<meta>`、`<link>` 或 `<script>` 标签等。
 
 #### 示例
 {: .no_toc }
 
-To add a custom favicon, create `_includes/head_custom.html` and add:
+要添加一个定制的 Favicon，创建 `_includes/head_custom.html`，然后添加：
 ```html
 <link rel="shortcut icon" type="image/png" href="{{site.baseurl}}/path/to/your/favicon.png">
 ```
@@ -186,19 +183,19 @@ To add a custom favicon, create `_includes/head_custom.html` and add:
 
 `_includes/header_custom.html`
 
-Content added to this file appears at the top of every page's main content between the site search and auxiliary links if they are enabled. If `search_enabled` were set to false and `aux_links` were removed, the content of `header_custom.html` would occupy the space at the top of every page.
+此文件内容出现在每个页面主内容顶部——站点搜索和 辅助链接（如果被启用）之间。如果 `search_enabled` 设置为 `false` 并且 `aux_links` 被移除，`header_custom.html` 内容将占掉每个页面顶部的所有空间。
 
 ### 定制 Nav Footer
 
 `_includes/nav_footer_custom.html`
 
-Any content added to this file will appear at the bottom left of the page below the site's navigation. By default an attribution to Just the Docs is displayed which reads, `This site uses Just the Docs, a documentation theme for Jekyll.`.
+此文件内的任何内容都会出现在页面的左下角——站点导航之后。默认情况下显示 Just the Docs 的归属，`This site uses Just the Docs, a documentation theme for Jekyll.`。
 
 ### 定制搜索占位符
 
 `_includes/search_placeholder_custom.html`
 
-Content added to this file will replace the default placeholder text in the search bar (and its `aria-label`), after stripping HTML and leading/trailing whitespace. By default, the content of the include is:
+此文件内容去除 HTML 和前后空格之后将取代默认的搜索框占位文本（也就是其 `aria-label` 属性值）。默认情况下内容是：
 
 {% raw %}
 
@@ -208,14 +205,14 @@ Search {{site.title}}
 
 {% endraw %}
 
-Override this file to render a custom placeholder. One common use-case is internationalization; for example,
+覆盖此文件重新定义占位符。常见的就是国际化使用；例如，
 
 {% raw %}
 
 ```liquid
-Chercher notre site
+搜索站点
 ```
 
 {% endraw %}
 
-would make the placeholder text "Chercher notre site". [Liquid code](https://jekyllrb.com/docs/liquid/) (including [Jekyll variables](https://jekyllrb.com/docs/variables/)) is also supported.
+占位符文字将变成“搜索站点”。支持[Liquid 代码](https://jekyllrb.com/docs/liquid/) (包括 [Jekyll 变量](https://jekyllrb.com/docs/variables/))。

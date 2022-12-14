@@ -72,7 +72,7 @@ mermaid:
 
 查阅[代码相关文档]({{ site.baseurl }}{% link docs/ui-components/code.md %}#mermaid-diagram-code-blocks)获取更多配置选项和信息。
 
-## Aux 链接
+## 辅助链接
 
 ```yaml
 # Aux links for the upper right navigation
@@ -119,7 +119,7 @@ gh_edit_branch: "main" # the branch that your docs is served from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
 ```
 
-_注记：`footer_content` 已经被声明弃用，但是现在还支持。更好的体验我们已经将其移入一个叫做 `_includes/footer_custom.html` 的文件（该文件允许更强标记系统——基于 Liquid 的内容）。_
+_注记_：`footer_content` 已经被声明弃用，但是现在还支持。更好的体验我们已经将其移入一个叫做 `_includes/footer_custom.html` 的文件（该文件允许更强标记系统——基于 Liquid 的内容）。_
 
 - “页面最后修改”数据只有当页面有叫做 `last_modified_date` 的值时才显示，数据格式使用可读日期格式
 - `last_edit_time_format` 使用 Ruby 的 DateTime 格式；查阅示例和更多信息[在此链接](https://apidock.com/ruby/DateTime/strftime)。
@@ -164,7 +164,7 @@ callouts:
     color: red
 ```
 
-This uses the color `$red-000` for the background of the callout, and `$red-300` for the title and box decoration.[^dark] You can then style a paragraph as a `warning` callout like this:
+本例使用颜色 `$red-000` 做标注背景色，使用颜色 `$red-300` 做 title 和盒子装饰。[^dark]您可以用 `warning` 标注美化一个段落：
 
 ```markdown
 {: .warning }
@@ -172,9 +172,9 @@ A paragraph...
 ```
 
 [^dark]:
-    If you use the `dark` color scheme, this callout uses `$red-300` for the background, and `$red-000` for the title.
+    如果您使用 `dark` 色系方案，此标注用 `$red-300` 做背景色，用 `$red-000` 设定 title。
 
-The colors `grey-lt`, `grey-dk`, `purple`, `blue`, `green`, `yellow`, and `red` are predefined; to use a custom color, you need to define its `000` and `300` levels in your SCSS files. For example, to use `pink`, add the following to your `_sass/custom/custom.scss` file:
+颜色 `grey-lt`、`grey-dk`、`purple`、`blue`、`green`、`yellow` 和 `red` 是预定义的；要使用定制颜色，您需要在您的 SCSS 文件中定义它的 `000` 到 `300` 层。例如，要用 `pink`，在您的 `_sass/custom/custom.scss` 文件中添加下面代码：
 
 ```scss
 $pink-000: #f77ef1;
@@ -183,7 +183,7 @@ $pink-200: #e94ee1;
 $pink-300: #dd2cd4;
 ```
 
-You can override the default `opacity` of the background for a particular callout, e.g.:
+您可以覆盖默认背景色的 `opacity`，设定一个特殊的标注，例如：
 
 ```yaml
 callouts:
@@ -192,21 +192,17 @@ callouts:
     opacity: 0.3
 ```
 
-You can change the default opacity (`0.2`) for all callouts, e.g.:
+您可以修改所有标注默认的 opacity (`0.2`) ，例如：
 
 ```yaml
 callouts_opacity: 0.3
 ```
 
-You can also adjust the overall level of callouts.
-The value of `callouts_level` is either `quiet` or `loud`;
-`loud` increases the saturation and lightness of the backgrounds.
-The default level is `quiet` when using the `light` or custom color schemes,
-and `loud` when using the `dark color scheme.`
+您还可以调整标注的 overall 层。`callouts_level` 的值是 `quiet` 或 `loud`；`loud` 增加了背景的饱和度和亮度。当使用 `light` 或者定制色彩方案时默认级为 `quiet`，使用 `暗色色彩方案` 时是 `loud`。
 
-See [Callouts]({{ site.baseurl }}{% link docs/ui-components/callouts.md %}) for more information.
+查阅[标注]({{ site.baseurl }}{% link docs/ui-components/callouts.md %})获取更多信息。
 
-## Google Analytics
+## Google 分析
 
 ```yaml
 # Google Analytics Tracking (optional)
@@ -217,40 +213,39 @@ ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (t
 
 ## 文档专题
 
-默认情况下，导航和搜索囊括普通[页面](https://jekyllrb.com/docs/pages/)。您可以使用 [Jekyll 专题](https://jekyllrb.com/docs/collections/)聚合语义相关文档。
+默认情况下，导航和搜索都会包括普通[页面](https://jekyllrb.com/docs/pages/)。您可以使用 [Jekyll 专题](https://jekyllrb.com/docs/collections/)聚合语义相关文档。
 
 例如，将所有测试文件放入 `_tests` 文件夹，创建 `tests` 专题：
 
 ```yaml
-# Define Jekyll collections
+# 定义 Jekyll 专题
 collections:
-  # Define a collection named "tests", its documents reside in the "_tests" directory
+  # 定一个叫做 "tests" 的专题，其文件都在 "_tests" 文件夹内
   tests:
     permalink: "/:collection/:path/"
     output: true
 
 just_the_docs:
-  # Define which collections are used in just-the-docs
+  # 定义 just-the-docs 内的专题
   collections:
-    # Reference the "tests" collection
+    # 定义 "tests" 专题
     tests:
-      # Give the collection a name
+      # 给定专题名字
       name: Tests
-      # Exclude the collection from the navigation
-      # Supports true or false (default)
+      # 导航中不包括的专题
+      # 支持 true 或 false （默认值）
       # nav_exclude: true
-      # Fold the collection in the navigation
-      # Supports true or false (default)
+      # 导航内专题可折叠
+      # 支持 true 或 false （默认值）
       # nav_fold: true
-      # Exclude the collection from the search
-      # Supports true or false (default)
+      # 搜索不包含专题
+      # 支持 true 或 false （默认值）
       # search_exclude: true
 ```
 
-The navigation for all your normal pages (if any) is displayed before those in collections.
+导航默认会显示（除专题外）所有普通页面（如果有）。
 
-You can reference multiple collections.
-This creates categories in the navigation with the configured names.
+您可以使用多个专题。这会用配置的名字在导航中创建分类。
 
 ```yaml
 collections:
@@ -269,6 +264,6 @@ just_the_docs:
       name: Tutorials
 ```
 
-When *all* your pages are in a single collection, its name is not displayed.
+当您的**所有**页面在一个专题中时，它的名字就不会显示了。
 
-The navigation for each collection is a separate name space for page titles: a page in one collection cannot be a child of a page in a different collection, or of a normal page.
+导航中每个专题都是其页面标题的独立命名空间：一个专题的一个页面不能是别的专题的子页面或普通页面。

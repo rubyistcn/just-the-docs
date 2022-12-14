@@ -6,7 +6,7 @@ grand_parent: UI 组件
 permalink: /docs/ui-components/code/line-numbers/
 ---
 
-# Code snippets with line numbers
+# 代行标的代码
 
 The default settings for HTML compression are incompatible with the HTML
 produced by Jekyll (4.1.1 or earlier) for line numbers from highlighted code
